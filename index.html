@@ -47,17 +47,16 @@
     <audio controls>
         <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
     </audio>
-
 </section>
 
 <section id="deporte">
     <h2>Deportes</h2>
-    <p>(Se mantiene contenido original para no romper todo)</p>
+    <p>Contenido deportivo del sitio.</p>
 </section>
 
 <section id="negocios">
     <h2>Negocios</h2>
-    <p>(Contenido existente mantenido)</p>
+    <p>Contenido de negocios del sitio.</p>
 </section>
 
 <!-- FORMULARIO CONTACTO -->
@@ -72,43 +71,8 @@
     <p>© 2026 El Faro</p>
 </footer>
 
-<!-- JAVASCRIPT -->
-<script>
-
-function actualizarHora() {
-    const ahora = new Date();
-    document.getElementById("fechaHora").innerText = ahora.toLocaleString();
-}
-setInterval(actualizarHora, 1000);
-
-// AGREGAR ARTÍCULO
-function agregarArticulo() {
-    const titulo = document.getElementById("titulo").value;
-    const descripcion = document.getElementById("descripcion").value;
-
-    const contenedor = document.getElementById("listaArticulos");
-
-    const articulo = document.createElement("div");
-    articulo.innerHTML = `<h3>${titulo}</h3><p>${descripcion}</p>`;
-
-    contenedor.appendChild(articulo);
-
-    actualizarContador();
-}
-
-// CONTADOR
-function actualizarContador() {
-    const cantidad = document.getElementById("listaArticulos").children.length;
-    document.getElementById("contador").innerText = cantidad;
-}
-
-// FORMULARIO CONTACTO
-function enviarMensaje() {
-    const nombre = document.getElementById("nombre").value;
-    alert("Mensaje enviado correctamente, " + nombre);
-}
-
-</script>
+<!-- JS EXTERNO -->
+<script src="script.js"></script>
 
 </body>
 </html>
