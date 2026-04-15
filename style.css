@@ -12,6 +12,13 @@ header {
     text-align: center;
 }
 
+/* Reloj */
+#fechaHora {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 /* Navegación */
 nav {
     background-color: #00509e;
@@ -77,6 +84,45 @@ article {
     background-color: #f9f9f9;
 }
 
+/* Lista dinámica */
+#listaArticulos div {
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 4px solid #00509e;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Contador */
+#contador {
+    font-weight: bold;
+    color: #00509e;
+}
+
+/* Formularios */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Botones */
+button {
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003f7d;
+}
+
 /* Multimedia */
 video, audio {
     margin-top: 10px;
@@ -90,4 +136,16 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        margin: 10px;
+    }
 }
