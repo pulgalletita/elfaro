@@ -1,3 +1,19 @@
+<?php
+
+// PROCESAR FORMULARIO CONTACTO
+$mensajeConfirmacion = "";
+
+if ($_POST) {
+    if (isset($_POST['nombre']) && isset($_POST['mensaje'])) {
+        $nombre = $_POST['nombre'];
+        $mensaje = $_POST['mensaje'];
+
+        $mensajeConfirmacion = "Mensaje recibido de $nombre";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -62,9 +78,18 @@
 <!-- FORMULARIO CONTACTO -->
 <section>
     <h2>Contacto</h2>
-    <input type="text" id="nombre" placeholder="Nombre">
-    <textarea id="mensaje" placeholder="Mensaje"></textarea>
-    <button onclick="enviarMensaje()">Enviar</button>
+
+    <form method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- MENSAJE PHP -->
+    <?php if ($mensajeConfirmacion != ""): ?>
+        <p><?php echo $mensajeConfirmacion; ?></p>
+    <?php endif; ?>
+
 </section>
 
 <footer>
