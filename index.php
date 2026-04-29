@@ -1,11 +1,15 @@
 <?php
 
-// CONTROLADOR SIMPLE
-if ($_POST) {
-    $nombre = $_POST['nombre'] ?? '';
-    $mensaje = $_POST['mensaje'] ?? '';
+$mensajeConfirmacion = "";
 
-    echo "<p>Mensaje recibido de $nombre</p>";
+// PROCESAR FORMULARIO
+if ($_POST) {
+    if (isset($_POST['nombre']) && isset($_POST['mensaje'])) {
+        $nombre = $_POST['nombre'];
+        $mensaje = $_POST['mensaje'];
+
+        $mensajeConfirmacion = "Mensaje recibido de $nombre";
+    }
 }
 
 // CARGAR VISTA
